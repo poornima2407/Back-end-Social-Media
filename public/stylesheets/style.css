@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.flex{
+  display: flex;
+  gap: 20px;
+}
+.image{
+  width: 5vw;
+  height: 11vh;
+  border-radius: 50%;
+  border: 3px solid #c78c8cd1;
+  overflow: hidden;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post textarea{
+  height: 100px !important;
+  resize: none;
+}
+.parentcircle{
+  position: relative;
+}
+.pencil{
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  position: absolute;
+  left: 46px;
+  top: 5px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.pencil i{
+  opacity: 0.5;
+  font-size: 12px;
+}
+.parentcircle:hover .pencil{
+  opacity: 1;
+}
+#uploadpic{
+  display: none;
+}

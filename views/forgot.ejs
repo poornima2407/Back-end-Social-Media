@@ -1,0 +1,14 @@
+<% include ./partials/header.ejs %>
+<div class="cont p-3">
+    <h2>Forgot Password</h2>
+    <hr>
+    <form action="/forgot" method="post">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+        </div>
+        <a href=""></a>
+        <button type="submit" class="btn btn-success">Send Email</button>
+    </form>
+</div>
+<% include ./partials/footer.ejs %>

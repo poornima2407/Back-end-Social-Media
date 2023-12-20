@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+    <div class="cont py-3 px-4">
+        <h4 class="mb-4">Feed</h4>
+        <p style="margin-top: -18px;">Posts from all around</p>
+        <hr>
+        <% allPosts.reverse().forEach(function(post){ %>
+            <div class="card mb-3" style="width: 45rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><%= post.userid.username %> </h5>
+                  <p class="card-text"><%= post.post %></p>
+                  <p style="font-weight: 600;" class="text-primary"><%= post.likes.length %> Likes</p>
+                  <a href="/like/<%= post._id %>" class="btn <%= post.likes.indexOf(user.id) === -1 ? 'btn-primary' : 'btn-danger' %>"><%= post.likes.indexOf(user.id)=== -1 ? "Like" : "Unlike" %></a> 
+                </div>
+            </div>
+        <% }) %>
+
+    </div>
+<% include ./partials/footer.ejs %>
